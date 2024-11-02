@@ -4,7 +4,6 @@ import {Feature, PaginatedData} from "@/types";
 import FeatureItem from "@/Components/FeatureItem";
 
 export default function Index({features}: {features: PaginatedData<Feature>}) {
-  console.log(features)
   return (
     <AuthenticatedLayout
       header={

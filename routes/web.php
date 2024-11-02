@@ -16,7 +16,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    Route::middleware(['verified'])->group(function () {
+    Route::middleware(['verified', 'role:'.\App\Enum\RolesEnum::User->value])->group(function () {
         Route::get('/dashboard', function () {
             return Inertia::render('Dashboard');
         })->name('dashboard');

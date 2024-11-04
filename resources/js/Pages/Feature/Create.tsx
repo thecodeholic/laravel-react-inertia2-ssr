@@ -63,6 +63,7 @@ export default function Show() {
 
               <TextAreaInput
                 id="description"
+                rows={6}
                 className="mt-1 block w-full"
                 value={data.description}
                 onChange={(e) => setData('description', e.target.value)}
